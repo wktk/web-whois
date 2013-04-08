@@ -1,12 +1,25 @@
 require 'haml'
+require 'simpleidn'
 require 'sinatra'
 require 'whois'
+
+helpers do
+  def lookup(domain)
+    Whois::Client.new.lookup(idn_encode(domain))
+  rescue
+    'Error!'
+  end
+
+  def idn_encode(domain)
+    SimpleIDN.to_ascii(domain)
+  end
+end
 
 get '/' do
   haml :index
 end
 
 get '/*' do |domain|
-  result = Whois::Client.new.lookup(domain) rescue 'Error!'
+  result = lookup(domain)
   haml :result, locals: { result: result, domain: domain }
 end
