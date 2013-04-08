@@ -19,6 +19,10 @@ get '/' do
   haml :index
 end
 
+get '/lookup' do
+  redirect to "/#{URI.escape(params['domain'])}"
+end
+
 get '/*' do |domain|
   result = lookup(domain)
   haml :result, locals: { result: result, domain: domain }
