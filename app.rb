@@ -5,7 +5,7 @@ require 'whois'
 
 helpers do
   def lookup(domain)
-    Whois::Client.new.lookup(idn_encode(domain))
+    Whois.query(idn_encode(domain))
   rescue
     'Error!'
   end

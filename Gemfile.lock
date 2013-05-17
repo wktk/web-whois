@@ -11,14 +11,14 @@ GEM
       rack (~> 1.5, >= 1.5.2)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    tilt (1.3.6)
-    whois (3.1.1)
+    tilt (1.4.1)
+    whois (3.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml (~> 4.0.1)
-  simpleidn (~> 0.0.4)
-  sinatra (~> 1.4.2)
-  whois (~> 3.1.1)
+  haml
+  simpleidn
+  sinatra
+  whois
