@@ -26,6 +26,7 @@ get '/lookup' do
 end
 
 get '/*' do |domain|
+  redirect to(domain.gsub(%r[/.*], '')) if domain.include?('/')
   result = lookup(domain)
   haml :result, locals: { result: result, domain: domain }
 end
