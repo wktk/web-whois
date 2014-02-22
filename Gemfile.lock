@@ -3,12 +3,12 @@ GEM
   specs:
     daemons (1.1.9)
     eventmachine (1.0.3)
-    haml (4.0.4)
+    haml (4.0.5)
       tilt
     rack (1.5.2)
-    rack-protection (1.5.1)
+    rack-protection (1.5.2)
       rack
-    simpleidn (0.0.4)
+    simpleidn (0.0.5)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -18,7 +18,7 @@ GEM
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     tilt (1.4.1)
-    whois (3.4.0)
+    whois (3.4.4)
 
 PLATFORMS
   ruby
