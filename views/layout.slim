@@ -1,0 +1,15 @@
+doctype html
+- domain ||= nil
+html
+  head
+    meta charset='utf-8'
+    title = domain ? "#{domain} - whois" : 'whois'
+    meta name='viewport' content='initial-scale=1.0, width=device-width, user-scalable=yes'
+  body
+    h1<
+      a href='/' whois
+    form action='/lookup' onsubmit='return updateLocation(this.domain.value)'
+      input name=:domain placeholder='Domain name' value=domain
+      input type=:submit
+    #content== yield
+    script src='/script/script.js'

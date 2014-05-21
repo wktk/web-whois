@@ -1,6 +1,6 @@
-require 'haml'
 require 'simpleidn'
 require 'sinatra'
+require 'slim'
 require 'whois'
 
 helpers do
@@ -18,7 +18,7 @@ helpers do
 end
 
 get '/' do
-  haml :index
+  slim :index
 end
 
 get '/lookup' do
@@ -28,5 +28,5 @@ end
 get '/*' do |domain|
   redirect to(domain.gsub(%r[/.*], '')) if domain.include?('/')
   result = lookup(domain)
-  haml :result, locals: { result: result, domain: domain }
+  slim :result, locals: { result: result, domain: domain }
 end
