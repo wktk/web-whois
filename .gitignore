@@ -1,3 +1,4 @@
 /.env
+/.rbenv-version
 /.bundle
 /vendor/bundle
