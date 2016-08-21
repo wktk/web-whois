@@ -2,3 +2,4 @@
 /.rbenv-version
 /.bundle
 /vendor/bundle
+.ruby-version
