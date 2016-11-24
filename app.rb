@@ -5,7 +5,7 @@ require 'whois'
 
 helpers do
   def lookup(domain)
-    Whois.query(idn_encode(domain))
+    Whois.whois(idn_encode(domain))
   rescue Whois::Error => e
     e.message
   rescue
