@@ -1,3 +1,4 @@
+require 'rack/ssl-enforcer'
 require 'simpleidn'
 require 'sinatra'
 require 'slim'
@@ -5,6 +6,10 @@ require 'whois'
 require_relative 'helpers'
 
 helpers { prepend Helpers }
+
+configure :production do
+  use Rack::SslEnforcer if ENV['ENFORCE_HTTPS']
+end
 
 get '/' do
   slim :index

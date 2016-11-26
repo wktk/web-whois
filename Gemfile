@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.3'
 
+gem 'rack-ssl-enforcer', '~> 0.2.9'
 gem 'simpleidn'
 gem 'sinatra', '~> 1.4'
 gem 'slim', '~> 3.0'
