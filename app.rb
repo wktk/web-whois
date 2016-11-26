@@ -2,20 +2,9 @@ require 'simpleidn'
 require 'sinatra'
 require 'slim'
 require 'whois'
+require_relative 'helpers'
 
-helpers do
-  def lookup(domain)
-    Whois.whois(idn_encode(domain))
-  rescue Whois::Error => e
-    e.message
-  rescue
-    'Error!'
-  end
-
-  def idn_encode(domain)
-    SimpleIDN.to_ascii(domain)
-  end
-end
+helpers { prepend Helpers }
 
 get '/' do
   slim :index
