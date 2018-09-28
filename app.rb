@@ -21,6 +21,7 @@ end
 
 get '/*' do |domain|
   redirect to(domain.gsub(%r[/.*], '')) if domain.include?('/')
-  result = lookup(domain)
+  result = lookup(domain).to_s
+  result.gsub!(/>>>[^<]+<<</, '') if params[:body_only]
   slim :result, locals: { result: result, domain: domain }
 end
