@@ -27,7 +27,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    whois (4.0.7)
+    whois (4.0.8)
 
 PLATFORMS
   ruby
