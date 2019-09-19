@@ -27,7 +27,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    whois (4.1.0)
+    whois (5.0.0)
 
 PLATFORMS
   ruby
@@ -38,7 +38,7 @@ DEPENDENCIES
   sinatra (~> 2.0)
   slim (~> 4.0)
   thin (~> 1.6)
-  whois (~> 4.1)
+  whois (~> 5.0)
 
 RUBY VERSION
    ruby 2.6.0p-1
