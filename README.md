@@ -1,8 +1,8 @@
 # web-whois
 
-Pretty simple web interface for whois lookups.
+Simple web interface for whois lookup
 
-Simply displays output of [whois gem](https://github.com/weppos/whois).
+Simply displays output of [whois gem](https://github.com/weppos/whois) via HTTP.
 
 ## Environment variables
 
