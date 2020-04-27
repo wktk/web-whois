@@ -19,13 +19,6 @@ heroku create
 git push heroku master
 ```
 
-As of writing, replacing the buildpack is required since web-whois uses Bundler 2.
-
-```sh
-heroku buildpacks:remove heroku/ruby
-heroku buildpacks:add https://github.com/bundler/heroku-buildpack-bundler2.git
-```
-
 ## Deployment (local)
 
 ```sh
