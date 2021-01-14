@@ -10,7 +10,7 @@ GEM
       rack
     rack-ssl-enforcer (0.2.9)
     ruby2_keywords (0.0.2)
-    simpleidn (0.1.1)
+    simpleidn (0.2.1)
       unf (~> 0.1.4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
